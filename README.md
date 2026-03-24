@@ -4,10 +4,8 @@ The goal of this repository is to practice and demonstrate core SQL skills appli
 
 ### Skills Demostrated
 - Data querying and filtering
-- Aggregations and grouping
-- Working with relational databases
 - Writing complex queries using joins and subqueries
-- Extracting insights from structured data
+- Aggregations and grouping
 
 ### Purpose
 This repository is part of my transition into data analysis, where I am strengthening my skills in SQL, Python, and data visualization tools.
