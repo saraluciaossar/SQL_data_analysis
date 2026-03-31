@@ -1,6 +1,6 @@
 # Project under review
 
-This repository is currently under review. The content may change and does not represent a final version.
+**This repository is currently under review. The content may change and does not represent a final version.**
 
 ### Relational database transactions
 This project focuses on analyzing a relational database with company and transaction data (sales and purchases) from 15 countries.
