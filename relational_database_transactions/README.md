@@ -20,4 +20,4 @@ companies - company information (country, contact details, etc.)
 credit_cards - card-related data (IBAN, expiration, etc.)
 transactions - purchase records, including amount, location, and status
 
-Relationships are defined through foreign keys between transactions and the other entities.
+Relationships are defined through foreign keys between transactions and the other entities
