@@ -74,15 +74,15 @@ INSERT INTO transactions_products (id_transaction, id_product)
 SELECT
     t.id_transaction,
     jt.id_product
-FROM transactions t,
-JSON_TABLE(
-    CONCAT(
+FROM transactions AS t
+CROSS JOIN JSON_TABLE( -- Por cada fila de transactions, genera varias filas (una por cada producto)
+    CONCAT( -- Se concatenan los nuevos replace con la estructura del array del JSON '[' y ']' 
         '["',
         REPLACE(REPLACE(t.id_product, ' ', ''), ',', '","'),
         '"]'
     ),
-    '$[*]' COLUMNS (
-        id_product VARCHAR(255) PATH '$'
+    '$[*]' COLUMNS ( -- recorre el JSON ($) y todos los elementos del array (*) y añadelo a una columna
+        id_product VARCHAR(255) PATH '$' -- PATH $ de cada elemento coge el valor completo y añadelo a una fila de la columna
     )
 ) AS jt;
 
