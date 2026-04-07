@@ -5,8 +5,8 @@ The content may change and does not represent a final version.**
 
 ### Overview
 
-This project focuses on analyzing a relational database containing information about transactions, users, companies, and credit cards.
-The goal is to explore transaction patterns and extract insights that could support business or analytical decision-making.
+This project focuses on designing and structuring a relational database that simulates a marketplace environment, similar to platforms like Amazon.
+The goal is to transform raw transactional data into a clean, structured, and analysis-ready database, enabling insights on user activity, company performance, and payment behavior.
 
 ### Database Structure
 
@@ -18,3 +18,19 @@ credit_cards - card-related data (IBAN, expiration, etc.)
 transactions - purchase records, including amount, location, and status
 
 Relationships are defined through foreign keys between transactions and the other entities.
+
+
+### What Was Done
+- Designed and created new tables (credit_card, users)
+- Cleaned and transformed data (updates, deletions, column removal)
+- Ensured data integrity through relationships
+- Built analytical views:
+  - VistaMarketing: company-level metrics (avg transaction value)
+  - InformeTecnico: detailed transaction traceability
+
+
+### Skills Applied
+- SQL (joins, aggregations, views)
+- Relational data modeling
+- Data integrity (primary & foreign keys)
+
