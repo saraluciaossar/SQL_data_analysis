@@ -1,8 +1,5 @@
 # Project under review
 
-**This repository is currently under review.  
-The content may change and does not represent a final version.**
-
 ### Overview
 
 This project focuses on designing and structuring a relational database that simulates a marketplace environment, similar to platforms like Amazon.
