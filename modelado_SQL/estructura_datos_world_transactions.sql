@@ -14,7 +14,8 @@ CREATE TABLE users_eua_raw (
 	country VARCHAR(255) NULL,
 	city VARCHAR(255) NULL,
 	postal_code VARCHAR(255) NULL,
-	address VARCHAR(255) NULL    
+	address VARCHAR(255) NULL,
+    region VARCHAR(255) NULL
 );
 
 -- User UE
@@ -28,7 +29,8 @@ CREATE TABLE users_ue_raw (
 	country VARCHAR(255) NULL,
 	city VARCHAR(255) NULL,
 	postal_code VARCHAR(255) NULL,
-	address VARCHAR(255) NULL    
+	address VARCHAR(255) NULL,
+    region VARCHAR(255) NULL
 );
 
 -- Users
@@ -43,6 +45,7 @@ CREATE TABLE users (
     city VARCHAR(255) NULL,
     postal_code VARCHAR(255) NULL,
     address VARCHAR(255) NULL,
+    region VARCHAR(255) NULL,
     PRIMARY KEY (id_user)
 );
 

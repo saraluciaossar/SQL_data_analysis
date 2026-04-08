@@ -12,7 +12,8 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
-(id_user, name, surname, phone, email, birth_date, country, city, postal_code, address);
+(id_user, name, surname, phone, email, birth_date, country, city, postal_code, address)
+SET region = 'Europa';
 
 SELECT *
 FROM users_ue_raw;
@@ -24,7 +25,8 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
-(id_user, name, surname, phone, email, birth_date, country, city, postal_code, address);
+(id_user, name, surname, phone, email, birth_date, country, city, postal_code, address)
+SET region = 'America';
 
 SELECT *
 FROM users_eua_raw;
@@ -46,15 +48,19 @@ WHERE id_user IS NULL
 	OR TRIM(id_user) = ' '; -- TRIM para eliminar espacios vacíos en caso de que venga más de uno
 
 -- Unir las dos tablas de users (eua y ue) en la nueva tabla "Users"
-INSERT INTO Users (id_user, name, surname, phone, email, birth_date, country, city, postal_code, address)
-SELECT id_user, name, surname, phone, email, birth_date, country, city, postal_code, address
+INSERT INTO users (id_user, name, surname, phone, email, birth_date, country, city, postal_code, address, region)
+SELECT id_user, name, surname, phone, email, birth_date, country, city, postal_code, address, region
 FROM users_eua_raw
 UNION ALL
-SELECT id_user, name, surname, phone, email, birth_date, country, city, postal_code, address
+SELECT id_user, name, surname, phone, email, birth_date, country, city, postal_code, address, region
 FROM users_ue_raw;
 
 SELECT *
-FROM users;
+FROM users
+ORDER BY id_user DESC;
+
+-- Se eliminan las tablas de EUA y UE
+DROP TABLE IF EXISTS users_eua_raw, users_ue_raw;
 
 -- Cargar datos de company
 LOAD DATA LOCAL INFILE '/Users/saraluciaossa/Downloads/companies.csv'
@@ -214,8 +220,6 @@ WHERE timestamp IS NULL
 ALTER TABLE transactions
 MODIFY COLUMN timestamp DATETIME;
 
--- Se eliminan las tablas RAW de users_eua y users_ue
-DROP TABLE IF EXISTS users_eua_raw, users_ue_raw;
 
 -- Se eliminan los campos track 1 y track 2 de credit_card
 ALTER TABLE credit_card
@@ -257,7 +261,6 @@ WHERE id_product IS NULL
 ALTER TABLE products
 MODIFY id_product VARCHAR(255) NOT NULL,
 ADD CONSTRAINT pk_product PRIMARY KEY (id_product);
-
 
 
 

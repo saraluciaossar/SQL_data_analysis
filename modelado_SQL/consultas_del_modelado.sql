@@ -70,6 +70,7 @@ CREATE TABLE transactions_products (
     PRIMARY KEY (id_transaction, id_product)
 );
 
+
 INSERT INTO transactions_products (id_transaction, id_product)
 SELECT
     t.id_transaction,
@@ -89,6 +90,19 @@ CROSS JOIN JSON_TABLE( -- Por cada fila de transactions, genera varias filas (un
 
 SELECT *
 FROM transactions_products;
+
+-- Para comprobar el número de filas (que debe ser mayor que el que tenía el csv)
+SELECT COUNT(*) AS total_filas
+FROM transactions_products;
+
+-- Se crean las correspondientes FK para que el modelo quede cohesionado
+ALTER TABLE transactions_products
+	ADD CONSTRAINT fk_tp_transaction
+FOREIGN KEY (id_transaction) REFERENCES transactions(id_transaction);
+
+ALTER TABLE transactions_products
+	ADD CONSTRAINT fk_tp_product
+FOREIGN KEY (id_product) REFERENCES products(id_product);
 
 -- Exercici 1
 -- Necessitem conèixer el nombre de vegades que s'ha venut cada producte.
