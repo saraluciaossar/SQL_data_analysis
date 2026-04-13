@@ -3,6 +3,16 @@ USE transactions;
 -- NIVEL 1
 -- Exercici 1
 
+-- Creamos la tabla credit_card
+    CREATE TABLE credit_card (
+		id VARCHAR(15) PRIMARY KEY,
+		iban VARCHAR(100),
+		pan VARCHAR(50),
+		pin VARCHAR(4),
+		cvv VARCHAR(3),
+		expiring_date VARCHAR(8)
+	);
+    
 ALTER TABLE transaction
 ADD CONSTRAINT fk_transaction_credit_card
 FOREIGN KEY (credit_card_id)
