@@ -1,6 +1,4 @@
-# Project under review
-
-### Overview
+# Overview
 
 This project focuses on designing and structuring a relational database that simulates a marketplace environment, similar to platforms like Amazon.
 The goal is to transform raw transactional data into a clean, structured, and analysis-ready database, enabling insights on user activity, company performance, and payment behavior.
