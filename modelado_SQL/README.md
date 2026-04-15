@@ -1,4 +1,4 @@
-### Overview
+# Overview
 
 This project consists of building a relational database called world_transactions from CSV files and structuring it using a star schema.
 The goal is to prepare the data for analysis and extract insights related to user activity, transactions, and product sales.
