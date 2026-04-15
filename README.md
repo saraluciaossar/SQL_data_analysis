@@ -17,7 +17,7 @@ The work focuses on modeling and analyzing transactional data from CSV datasets,
 - Product-level aggregation using normalized transaction data
 
 ### Skills
-- SQL querying (JOIN, subqueries, CTEs)
+- SQL querying (JOIN, subqueries, CTEs, window functions, views)
 - Aggregations and grouping
 - Data modeling (star schema)
 - Data cleaning and transformation
