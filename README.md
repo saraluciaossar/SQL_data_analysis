@@ -19,7 +19,7 @@ The work focuses on modeling and analyzing transactional data from CSV datasets,
 ### Skills
 - SQL querying (JOIN, subqueries, CTEs, window functions, views, case)
 - Aggregations and grouping
-- Data modeling (star schema)
+- Data modeling (star schema vs snowflake)
 - Data cleaning and transformation
 - Analytical thinking applied to structured data
 
