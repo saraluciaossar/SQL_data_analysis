@@ -1,8 +1,3 @@
-# Project under review
-
-**This repository is currently under review.  
-The content may change and does not represent a final version.**
-
 ### Overview
 
 This project consists of building a relational database called world_transactions from CSV files and structuring it using a star schema.
