@@ -24,7 +24,7 @@ Relationships are defined through foreign keys between transactions and the othe
 - Integrated product data into the model
 
 ### Skills Applied
-- SQL (subqueries, joins, aggregations, window functions)
+- SQL (subqueries, joins, aggregations, window functions, views)
 - Star schema modeling
 - Data integration from multiple sources
 - Business logic implementation in SQL
