@@ -1,8 +1,4 @@
-# Project under review
-
-**This repository is currently under review. The content may change and does not represent a final version.**
-
-### Relational database transactions
+# Relational database transactions
 This project focuses on analyzing a relational database with company and transaction data (sales and purchases) from 15 countries.
 It aims to explore patterns in transaction activity and understand the relationships between companies and their financial operations using SQL.
 
@@ -10,6 +6,10 @@ It aims to explore patterns in transaction activity and understand the relations
 
 This project focuses on analyzing a relational database containing information about transactions, users, companies, and credit cards.
 The goal is to explore transaction patterns and extract insights that could support business or analytical decision-making.
+
+### Repository Structure
+bbdd_transactions.sql → full database creation script
+bbdd_transactions.pdf → documentation of the database structure and design
 
 ### Database Structure
 
