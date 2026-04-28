@@ -8,8 +8,8 @@ This project focuses on analyzing a relational database containing information a
 The goal is to explore transaction patterns and extract insights that could support business or analytical decision-making.
 
 ### Repository Structure
-bbdd_transactions.sql → full database creation script
-bbdd_transactions.pdf → documentation of the database structure and design
+- bbdd_transactions.sql → full database creation script
+- bbdd_transactions.pdf → documentation of the database structure and design
 
 ### Database Structure
 
