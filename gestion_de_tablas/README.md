@@ -5,9 +5,9 @@ The goal is to transform raw transactional data into a clean, structured, and an
 
 ### Repository Structure
 
-estructura_datos.sql → table creation and schema definition
-gestion_de_tablas.sql → queries for data manipulation and table management
-Informe_gestión_de_tablas.pdf → explanation of the process and results
+- estructura_datos.sql → table creation and schema definition
+- gestion_de_tablas.sql → queries for data manipulation and table management
+- Informe_gestión_de_tablas.pdf → explanation of the process and results
 
 ### Database Structure
 
